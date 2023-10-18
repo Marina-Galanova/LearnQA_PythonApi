@@ -16,10 +16,10 @@ methods = [{"method": "POST"}, {"method": "GET"}, {"method": "PUT"}, {"method": 
 
 for i in methods:
     response = requests.post("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
-    print(response.text + f" - Ответ для параметра POST и типа запроса {i['method']}")
+    print(response.text + f" - Ответ для типа запроса POST и параметра {i['method']}")
     response = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params=i)
-    print(response.text + f" - Ответ для параметра GET и типа запроса {i['method']}")
+    print(response.text + f" - Ответ для типа запроса GET и параметра {i['method']}")
     response = requests.put("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
-    print(response.text + f" - Ответ для параметра PUT и типа запроса {i['method']}")
+    print(response.text + f" - Ответ для типа зароса PUT и параметра {i['method']}")
     response = requests.delete("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
-    print(response.text + f" - Ответ для параметра DELETE и типа запроса {i['method']}")
+    print(response.text + f" - Ответ для типа запроса DELETE и параметра {i['method']}")
