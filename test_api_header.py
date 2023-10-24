@@ -7,4 +7,5 @@ class TestApiHeader:
         assert response.status_code == 200, f"Некоррекный статус код"
 
         response_header = response.headers
+
         assert "x-secret-homework-header" in response_header, f"Некорректный хедер"
